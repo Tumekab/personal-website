@@ -1,9 +1,9 @@
 ---
 import Header from "../components/Header.astro";
 
-import '@fontsource/open-sans';
+import "@fontsource/open-sans";
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -11,33 +11,32 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en" data-theme="dracula">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header />
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		/* --accent: 124, 58, 237;
+  :root {
+    /* --accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%); */
-		
-	}
-	@font-face {
-		font-family: 'LazyDog';
-		src: url('/fonts/Lazydog.woff') format('woff');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
+  }
+  @font-face {
+    font-family: "LazyDog";
+    src: url("/fonts/Lazydog.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
-	nav {
-		font-family: "LazyDog";
-	}
+  nav {
+    font-family: "LazyDog";
+  }
 </style>
